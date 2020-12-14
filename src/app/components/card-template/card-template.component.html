@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-content>
+        <ngx-gauge    
+        *ngIf="turnOnGauge"
+        [type]="gaugeType" 
+           [value]="gaugeValue" 
+           [label]="gaugeLabel"  
+           [append]="gaugeAppendText"
+           thick="14"
+           cap="round"
+           >
+    </ngx-gauge>
+
+    </mat-card-content>
+    <img *ngIf="showImage" [src]="image" mat-card-image />
+    <mat-card-actions >
+        <mat-button-toggle-group *ngIf="toggle" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle class="toggle__off" (click)="toggleOff()" [value]="off">OFF</mat-button-toggle>
+            <mat-button-toggle class="toggle__on" (click)="toggleOn()" [value]="on">ON</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        
+    </mat-card-actions>
+    <mat-card-footer></mat-card-footer>
+</mat-card>
+

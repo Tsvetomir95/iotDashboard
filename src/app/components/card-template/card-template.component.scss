@@ -1,0 +1,18 @@
+img {
+  width: 110px;
+}
+
+mat-card {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 340px;
+}
+
+.mat-button-toggle-appearance-standard {
+  background: green;
+}

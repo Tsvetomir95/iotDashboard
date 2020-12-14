@@ -1,0 +1,99 @@
+<section class="signup__container">
+  <mat-horizontal-stepper linear >
+    <mat-step [stepControl]="signUpForm" errorMessage="Fields are required!" >
+      <form [formGroup]="signUpForm">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field appearance="standard">
+          <mat-label>First Name</mat-label>
+          <input
+            formControlName="firstName"
+            matInput
+            required
+            type="text"
+            placeholder="Please type your first name"
+          />
+         
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            formControlName="lastName"
+            type="text"
+            required
+            placeholder="Please type your last name"
+          />
+          
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            type="email"
+            required
+            placeholder="example@gmail.com"
+          />
+          
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            formControlName="password"
+            type="password"
+            required
+            placeholder="Please type your password"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            formControlName="confirmPassword"
+            type="password"
+            required
+            placeholder="Please type your password again"
+          />
+          
+        </mat-form-field>
+        <div id="next__button">
+        <button  mat-raised-button color="accent" matStepperNext>Next</button>
+    </div>  
+    </form>
+      
+        
+    
+    </mat-step>
+    <mat-step [stepControl]="signUpFormNext" >
+        <form [formGroup]="signUpFormNext" >
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a birthday date</mat-label>
+        <input formControlName="date" [max]="maxDate" matInput required [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        
+      </mat-form-field>
+        <mat-radio-group  formControlName="gander">
+          <mat-radio-button  labelPosition="before" value="Male"
+            >Male</mat-radio-button
+          >
+          <mat-radio-button value="Famile">Famile</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-checkbox formControlName="terms" class="example-margin"
+          >I accept the Terms of Service</mat-checkbox
+        >
+        <button
+          mat-raised-button
+          type="button"
+          color="accent"
+          (click)="onSignUp()"
+            [disabled]="!signUpFormNext.valid"
+        >
+          Sign Up
+        </button>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+</section>

@@ -1,0 +1,62 @@
+button {
+  margin-top: 30px;
+}
+
+.signup__container {
+  position: relative;
+  top: 5vh;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80vh;
+  width: 50vw;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 29px 8px rgba(0, 0, 0, 0.79);
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  width: 30vw;
+}
+mat-label {
+  color: white;
+}
+
+input {
+  color: white;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+mat-radio-button {
+  //   margin-left: 2rem;
+}
+mat-horizontal-stepper {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+mat-step-header {
+}
+
+#next__button {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}

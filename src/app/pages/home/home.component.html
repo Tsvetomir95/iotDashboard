@@ -1,0 +1,57 @@
+<app-top-nav-menu (toggleSideNav)="toggleSideNav($event)"></app-top-nav-menu>
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <section id="mainContent">
+            <mat-card>
+                <mat-card-title>Change Temperature</mat-card-title>
+                <mat-card-content>
+                    <app-temperature></app-temperature>
+                </mat-card-content>
+            </mat-card>
+
+            <app-card-template 
+            title="Humidity" 
+            gaugeLabel="Humidity" 
+            [turnOnGauge]="true"
+            [toggle]="false"
+            >
+
+            </app-card-template>
+            <app-card-template 
+            title="Put The Lights" 
+            [turnOnGauge]="false"
+            [image]="image"
+            [showImage]="true"
+            [toggle]="true"
+            (toggleOnOff)="putTheLights($event)"
+            >
+            </app-card-template>
+            <app-card-template 
+            title="Temperature Info" 
+            [turnOnGauge]="true"
+            [showImage]="false"
+            gaugeAppendText="°C"
+            [gaugeValue]="tempValue"
+            >
+            </app-card-template>
+        </section>
+        
+    </mat-sidenav-content>
+    <mat-sidenav #sidenav mode="side" >
+        <div id="sideMenu">
+            <mat-list>
+                <mat-list-item>Dashboard <mat-icon>keyboard_arrow_right</mat-icon></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Home</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>About Page</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Charts</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Log Out</mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </div>
+    </mat-sidenav>  
+</mat-sidenav-container>
+  

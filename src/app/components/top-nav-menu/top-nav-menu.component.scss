@@ -1,0 +1,9 @@
+.nav-container {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-container > span {
+  margin-right: 2rem;
+}
