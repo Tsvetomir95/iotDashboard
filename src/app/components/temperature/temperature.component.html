@@ -5,6 +5,7 @@
            [append]="gaugeAppendText"
            thick="14"
            cap="round"
+           [thresholds]="colorScala"
            >
     </ngx-gauge>
 
@@ -18,6 +19,7 @@
     tickInterval="1"
     min="1"
     max="100"
+    
     (change)="sliderValueHasChange($event)"
     ></mat-slider>
     <button mat-icon-button  (click)="sliderCheckAdd()"><mat-icon>add</mat-icon></button>

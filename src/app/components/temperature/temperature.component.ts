@@ -13,6 +13,11 @@ export class TemperatureComponent implements OnInit {
   gaugeValue = 0;
   gaugeLabel = "Gradus Celsius";
   gaugeAppendText = "°C";
+  colorScala = {
+    '0': {color: 'green'},
+    '40': {color: 'orange'},
+    '75.5': {color: 'red'}
+};
   constructor() { }
 
   ngOnInit() {

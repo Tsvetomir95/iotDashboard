@@ -18,7 +18,12 @@ export class CardTemplateComponent implements OnInit {
   @Input() gaugeValue: number = 70;
   @Input() gaugeLabel: string;
   @Input() gaugeAppendText: string = "%";
-  
+  colorScala = {
+    '0': {color: 'green'},
+    '40': {color: 'orange'},
+    '75.5': {color: 'red'}
+};
+
   constructor() { }
 
   ngOnInit() {
