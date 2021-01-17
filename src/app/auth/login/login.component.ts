@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   navigateSignUp() {
-    this.router.navigateByUrl('/signup');
+    this.router.navigateByUrl('/auth/signup');
  }
 
 }

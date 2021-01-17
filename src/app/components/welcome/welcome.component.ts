@@ -12,8 +12,8 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(()=> {
-      this.router.navigateByUrl('home');
-    },4000);
+      this.router.navigateByUrl('auth');
+    },3000);
   }
 
 }

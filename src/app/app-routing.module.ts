@@ -8,9 +8,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
-  {path: 'signup', component: SignupComponent, data: {animation: 'SignUpPage'}},
-  {path: 'signin', component: LoginComponent, data: {animation: 'SignInPage'} },
-  {path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomeModule)}
+  // {path: 'signup', component: SignupComponent, data: {animation: 'SignUpPage'}},
+  // {path: 'signin', component: LoginComponent, data: {animation: 'SignInPage'} },
+  {path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomeModule)},
+  {path: 'auth', loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)},
   
 ];
 

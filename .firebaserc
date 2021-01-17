@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "iotdashboard-4395d": {
+      "hosting": {
+        "iotDashboard": [
+          "iotdashboard-4395d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "iotdashboard-4395d"
+  }
+}

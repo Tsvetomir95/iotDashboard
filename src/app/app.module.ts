@@ -22,8 +22,7 @@ import { AlertDialogSuccessComponent } from './components/alert-dialog-success/a
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    LoginComponent,
+   
     SideNavMenuComponent,
     HumidityComponent,
     WelcomeComponent,

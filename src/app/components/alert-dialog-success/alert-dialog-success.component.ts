@@ -13,7 +13,7 @@ export class AlertDialogSuccessComponent implements OnInit {
 
   ngOnInit() {
     this.dialogRef.afterClosed().subscribe(result => {
-      this.router.navigateByUrl('/signin');  
+      this.router.navigateByUrl('/auth');  
     });
   }
   // navigateToLoginScreen() {
