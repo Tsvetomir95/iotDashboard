@@ -6,15 +6,15 @@
     <form (ngSubmit)="onSignIn()" [formGroup]="signInForm">
         <mat-form-field appearance="standard">
             <mat-label>Email</mat-label>
-            <input formControlName="email" matInput  type="email" placeholder="Please type your email">
+            <input formControlName="email" matInput [value]="signInForm.value.email" type="email" placeholder="Please type your email">
             <!-- <mat-error align="end" *ngIf="!signInForm.controls.email.value">Required field</mat-error> -->
         </mat-form-field>
         <mat-form-field appearance="standard">
             <mat-label>Password</mat-label>
-            <input matInput formControlName="password" type="password" placeholder="Please type your last name">
+            <input matInput formControlName="password" [value]="signInForm.value.passowrd" type="password" placeholder="Please type your last name">
             <!-- <mat-error align="end" *ngIf="!signUpForm.controls.lastName.value">Required field</mat-error> -->
         </mat-form-field>
-      <button mat-raised-button [disabled]="!signInForm.valid" [routerLink]="['/', 'home']" type="submit" color="accent">Sign In</button>
+      <button mat-raised-button  [routerLink]="['/', 'home']" type="submit" color="accent">Sign In</button>
       <button mat-raised-button (click)="navigateSignUp()" type="button" color="accent">Sign Up</button>
     </form>
 </section>

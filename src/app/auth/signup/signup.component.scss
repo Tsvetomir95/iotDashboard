@@ -60,3 +60,20 @@ mat-step-header {
   bottom: 10px;
   right: 0;
 }
+
+@media (max-width: 766px) {
+  .signup__container {
+    height: 95vh;
+    width: 90vw;
+    padding: 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  h1 {
+    position: relative;
+    top: 50px;
+  }
+}

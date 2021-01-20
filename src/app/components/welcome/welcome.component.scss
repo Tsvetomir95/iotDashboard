@@ -14,3 +14,10 @@
   border-radius: 10px;
   box-shadow: 2px 0px 20px 13px #000000;
 }
+
+@media (max-width: 766px) {
+  .welcome__image {
+    width: 100%;
+    height: auto;
+  }
+}

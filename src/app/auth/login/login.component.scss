@@ -39,3 +39,20 @@ mat-radio-group {
   justify-content: space-between;
   margin: 30px 0;
 }
+
+@media (max-width: 766px) {
+  .signup__container {
+    height: 95vh;
+    width: 90vw;
+    padding: 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  h1 {
+    position: relative;
+    top: 50px;
+  }
+}

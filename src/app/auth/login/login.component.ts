@@ -14,11 +14,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     this.signInForm = new FormGroup({
-      email: new FormControl(null, {
+      email: new FormControl('markovtsvetomir95@gmail.com', {
       updateOn: 'blur',
       validators: [Validators.required, Validators.email]        
       }),
-      password: new FormControl(null, {
+      password: new FormControl('1234567832', {
       updateOn: 'blur',
       validators: [Validators.required]        
       }),
